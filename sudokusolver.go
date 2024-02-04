@@ -79,8 +79,8 @@ func main() {
 			if ch == '.' {
 				grid[i-1][j] = 0
 			} else {
-				num, err := strconv.Atoi(string(ch))
-				if err != nil || num < 1 || num > 9 {
+				num, _ := strconv.Atoi(string(ch))
+				if num < 1 || num > 9 {
 					fmt.Println("Error")
 					return
 				}
@@ -96,10 +96,15 @@ func main() {
 }
 
 func printGrid(grid *SudokuGrid) {
-	for _, row := range grid {
-		for _, num := range row {
-			fmt.Print(num, " ")
+	for i, row := range grid {
+		for j, num := range row {
+			fmt.Print(num)
+			if j < len(row)-1 {
+				fmt.Print(" ")
+			}
 		}
-		fmt.Println()
+		if i < len(grid)-1 {
+			fmt.Println()
+		}
 	}
 }
