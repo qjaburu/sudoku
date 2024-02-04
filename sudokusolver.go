@@ -107,4 +107,6 @@ func printGrid(grid *SudokuGrid) {
 			fmt.Println()
 		}
 	}
+	fmt.Println()
+	fmt.Print("$")
 }
