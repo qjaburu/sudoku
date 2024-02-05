@@ -66,7 +66,6 @@ func main() {
 	if len(os.Args) != 10 {
 		fmt.Println("Error")
 		fmt.Println()
-		fmt.Print("$")
 		return
 	}
 	for i := 1; i < len(os.Args); i++ {
@@ -75,7 +74,6 @@ func main() {
 		if len(input) != 9 {
 			fmt.Println("Error")
 			fmt.Println()
-			fmt.Print("$")
 			return
 		}
 
@@ -98,7 +96,6 @@ func main() {
 		fmt.Println("Error")
 	}
 	fmt.Println()
-	fmt.Print("$")
 }
 
 func printGrid(grid *SudokuGrid) {
